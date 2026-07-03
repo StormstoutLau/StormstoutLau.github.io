@@ -9,3 +9,4 @@
 - [Ubuntu LLM 调优抓虫日记：崩溃 / 关机 / 内核升级实战](07-debugging-journal.md)
 - [LLM 辅助数学证明：Vibe Proving 的实践与思考](08-vibe-proving.md)
 - [草台班子观察笔记：当一级市场的演员来到二级市场](10-草台班子观察笔记.md)
+- [Notes from a Potemkin Village: When Primary Market Actors Enter the Secondary Market](10-potemkin-village-notes.md)

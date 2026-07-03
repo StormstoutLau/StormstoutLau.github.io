@@ -25,6 +25,7 @@
 | 8 | [方法篇](posts/08-vibe-proving.md) | LLM 辅助数学证明 (Vibe Proving) |
 | 9 | [双机篇](posts/09-dual-395-distributed-inference.md) | 双机分布式推理部署 |
 | 10 | [观察篇](posts/10-草台班子观察笔记.md) | 草台班子观察笔记 |
+| 10en | [Notes](posts/10-potemkin-village-notes.md) | Notes from a Potemkin Village (English) |
 
 ## 实测性能数据 (AMD 395, Vulkan backend)
 
