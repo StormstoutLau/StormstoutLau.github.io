@@ -1,4 +1,4 @@
-# AMD 395 本地大模型部署实战
+﻿# AMD 395 本地大模型部署实战
 
 > 在 AMD Ryzen AI MAX+ 395 (128GB) + Ubuntu 24.04 上部署本地大模型的完整踩坑记录。
 
@@ -23,6 +23,8 @@
 | 6 | [Agent篇](posts/06-local-agent-deployment.md) | Hermes Agent + OpenClaw + 飞书接入 |
 | 7 | [踩坑篇](posts/07-debugging-journal.md) | LM Studio 崩溃 / GNOME 关机 / 内核升级 |
 | 8 | [方法篇](posts/08-vibe-proving.md) | LLM 辅助数学证明 (Vibe Proving) |
+| 9 | [双机篇](posts/09-dual-395-distributed-inference.md) | 双机分布式推理部署 |
+| 10 | [观察篇](posts/10-草台班子观察笔记.md) | 草台班子观察笔记 |
 
 ## 实测性能数据 (AMD 395, Vulkan backend)
 

@@ -1,4 +1,4 @@
-# 博客文章索引
+﻿# 博客文章索引
 
 - [GPU 工作站选购指南：Nvidia DGX Spark vs AMD 395](01-gpu-workstation-selection.md)
 - [Ubuntu 24.04 AI 开发环境从零搭建](02-ubuntu-dev-environment.md)
@@ -8,3 +8,4 @@
 - [本地 Agent 部署实战：Hermes Agent + OpenClaw + 飞书](06-local-agent-deployment.md)
 - [Ubuntu LLM 调优抓虫日记：崩溃 / 关机 / 内核升级实战](07-debugging-journal.md)
 - [LLM 辅助数学证明：Vibe Proving 的实践与思考](08-vibe-proving.md)
+- [草台班子观察笔记：当一级市场的演员来到二级市场](10-草台班子观察笔记.md)
