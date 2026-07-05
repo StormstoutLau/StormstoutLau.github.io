@@ -180,11 +180,11 @@ These behaviors together formed a self-reinforcing hallucination system: hear ne
 
 ## Systemic Ignorance
 
-It was not that the Deputy was stingy, not that the PhD was paranoid — the cognitive level of the entire organization determined that they could not understand what you were doing.
+It was not that the Deputy was stingy, not that the PhD was paranoid — the cognitive level of the entire organization determined that they could not understand what I was doing.
 
 In the Deputy's cognition, "quant" was "looking at K-lines on a computer," the difference from himself being only an extra screen. In the PhD's cognition, "backtesting" was "writing a script by hand and running it once," and he could not understand why an automated pipeline needed compute. In the Boss's cognition, "quant" was a fancy-sounding word used to package primary-market stories.
 
-They did not hire because they understood quant, but because "quant sounds fancy; we should have one too." This fundamental cognitive misalignment meant — you were not driving change; you were doing something they could not possibly understand, in an organization that could not possibly understand you.
+They did not hire because they understood quant, but because "quant sounds fancy; we should have one too." This fundamental cognitive misalignment meant — I was not driving change; I was doing something they could not possibly understand, in an organization that could not possibly understand me.
 
 ## The Structural Cause of Death for Primary-to-Secondary Transitions
 
@@ -304,26 +304,48 @@ I may have said nothing, but my presence itself made them uncomfortable. The Dep
 
 My presence itself was a negation of their narrative. I did not need to say a word; my way of working was saying "what you are saying, I can test with code." When a man is bragging and someone who can verify the brag stands next to him, the brag stops.
 
-So they needed to make me disappear — not physically, but in voice. No computer for you, no pipeline for you, opposition to your automation. Not because you did something wrong, but because you did something right. Your presence meant they could no longer lie.
+So they needed to make me disappear — not physically, but in voice. No computer for me, no pipeline for me, opposition to my automation. Not because I did something wrong, but because I did something right. My presence meant they could no longer lie.
 
-## Leaving
+## What I Learned from This Experience
 
-I did not leave voluntarily. The Deputy told me: quant is done; we are dissolving.
+The greatest value of this experience was not that it showed me who these people were — it was that it showed me **what breaks, why it breaks, and how to know it will break before it does**.
 
-I was not fired — the entire quant unit was cut. The PhD went to Huawei, the Deputy went back to subjective trading, the Boss went back to the primary market. They scattered not because someone left, but because this organization had never actually done quant; dissolution was just a return to its original state.
+**1. Wherever there is no automated pipeline, a Potemkin village will grow.**
 
-And I, the moment I got the dissolution notice, felt relief.
+The PhD's manual parameter tuning was not an individual capability problem; it was an organizational architecture problem. When the validation process depends on one person's manual operation — he runs it once, draws a chart, tells a story — validation ceases to exist, because no one can reproduce his operation, and no one can check whether he performed the tests he should have. Manual operation is a black box; nothing real grows in a black box — only narratives.
 
-I did not need this job to prove myself; I already had my own work. This job was not a livelihood to me; it was the runtime environment for a diagnostic program. The diagnostic program finished running, the conclusions were output, the runtime environment closed — this was not failure; it was a normal exit.
+This is what later drove me to build the entire Factor_Pipeline, Factor_Fingerprint, Factor_Decoupler toolchain. I had seen, with my own eyes, what happens without these things — an optoelectronics-materials PhD could fool an entire organization with a turnover factor, simply because no one had an automated pipeline to run out-of-sample tests. Tools are not efficiency upgrades; they are **firewalls against lies**. Where there is no pipeline, the PhD's manual tuning is the default state; where there is a pipeline, his curve gets killed at step one.
 
-I was not driven out, and I did not flee. Before they dissolved, I had already finished what I came to do. By the time they dissolved, I was already packing my things.
+**2. Research that cannot be reproduced equals research that was never done.**
 
-I left a wrong organization, and then used the counter-example of that organization to build an entire correct system. This was not "leaving"; it was distilling error into methodology.
+The PhD's codebase — twenty-odd notebooks, zero tests, zero documentation, zero version control — calling it "poor engineering" would be generous; the problem is that **the research itself was invalid**. The value of a piece of research does not depend on whether its conclusion is correct; it depends on whether it can be independently reproduced. Irreproducible research is no different from a story told at a dinner — both are unfalsifiable narratives.
 
-## Finally
+This experience turned "reproducibility" from an academic virtue into a hard engineering constraint for me. Every factor tool I build has pyproject.toml, version control, test suites, documentation. Not because I have engineering OCD — because I have seen what happens in places without these things. There, "I got this result" was the final answer; no one could say "let me re-run your code" — because the code would not run, the parameters were in someone's head, the data was on someone's desk. Reproducibility is not a sentence written in a paper's methodology section; it is the discipline of every line of code, every config file, every commit.
 
-In the end, the wall between primary-market players and quant is not a methodological wall; it is a worldview wall. In that world, monologue can replace rigor, relationships can replace ability, capital can replace cognition.
+**3. Humans are the least reliable component in a research system.**
 
-I was there, I saw, I left.
+That sounds cynical, but it is engineering experience. The PhD was not deliberately deceiving — as I said earlier, he may have genuinely believed his own curves. The problem is not whether he was honest; it is that the system vested the power of validation in one person, and that person lacked the ability to validate himself. A person who cannot be checked by the system, no matter how smart or honest, becomes a single point of failure.
 
-Any information that cannot be independently validated is, in essence, noise. This is the most important thing I learned at the Potemkin village.
+This is also why I later invested in LLM-assisted research paradigms. Not "use AI to replace humans" — but **take humans out of the validation chain**. Humans propose hypotheses, design frameworks, interpret results, but validation itself must be executed by the system, not dependent on any one person's manual operation. LLMs do preliminary code review, execute statistical tests, cross-validate results. Human + LLM + automated pipeline = a research system that does not depend on single-point trust. Human alone = Potemkin village.
+
+**4. Vibe coding and new production paradigms.**
+
+The PhD hand-typing low-quality code, refusing modularity, not understanding version control — this was not personal preference; it was a backward production paradigm. In his world, "write a script, run it once, get a chart" was the entire research workflow. He did not know that data layer, factor layer, backtest layer, and validation layer needed separation; did not know that each layer needed independent testing; did not know that reusable modules are more efficient than hand-typing a hundred times.
+
+This experience made me realize: **the bottleneck on research efficiency is not compute, not data — it is the production paradigm itself.** One person hand-running factors with scripts — how many can they run in a day? With an automated pipeline — thousands. With LLM-assisted code generation + automated pipeline + formal verification — tens of thousands of hypotheses per day, each with statistical tests, out-of-sample validation, reproducible records.
+
+That is the essence of vibe coding — not "let AI write code," but upgrading the research production paradigm from handicraft to industrial assembly line. The PhD's manual tuning was handicraft; my factor toolchain is industrial assembly line; LLM assistance + formal verification is the post-industrial paradigm. The Potemkin village failed not because the people were no good; it failed because the production paradigm was stuck in the handicraft era.
+
+**5. Distrust is the infrastructure of a research system.**
+
+The entire Potemkin village story, in the end, is a story about trust. The Boss trusted the PhD's title, the Deputy trusted the PhD's performance, the PhD trusted his own curves. Every layer of trust had no validation mechanism supporting it — not because they did not want to validate, but because there was no place for validation in their system.
+
+The entire Research OS I later built — from Open_Data to Factor_Fingerprint to Lean4 formal verification — is essentially a **distrust system**. Distrust factors, so run four-path diagnostics; distrust models, so do operator conduction analysis; distrust my own judgment, so use Lean4 to prove theorems; distrust bloggers' predictions, so build the distillation framework. Each layer of distrust corresponds to a detection tool; every detection tool grew out of some layer of trust collapsing.
+
+This is not pessimism. Quite the opposite — **distrust is constructive**. A system that does not trust single points will build redundancy, build cross-validation, build formal proofs. A system that trusts individuals does not need to build anything, because "what he says is right." The most important thing the Potemkin village taught me is not "do not trust people"; it is that trust must be supported by systems, not substituted by people.
+
+---
+
+I left a wrong organization, and then used the counter-example of that organization to build an entire correct system.
+
+This was not "leaving"; it was distilling error into methodology.
