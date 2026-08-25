@@ -2,58 +2,44 @@
 
 > Quantitative researcher building the verification layer for systematic finance and LLM agents.
 
-Independent researcher working at the intersection of quantitative finance, statistics, and AI. One question runs through everything I build: **how much should we trust a factor, a model, or an agent — and how do we measure it?**
+One question runs through everything I build: **how much should we trust a factor, a model, or an agent — and how do we measure it?**
 
-## Research Interests
+## Research Program
 
-- **Factor diagnostics** — detecting when a factor genuinely fails, from the factor zoo to live strategies
-- **LLM-agent verification** — falsifiable, statistically grounded constraints for financial AI agents
-- **Derivative pricing & model fragility** — operator-based detection of when a model stops being trustworthy
-- **Formal verification** — proving econometric and mathematical claims in Lean4
+| Line | What | Flagship repos |
+|---|---|---|
+| **Factor diagnostics** | Which factors in the zoo genuinely fail — and how do we detect it before it hurts? | [Factor_Fingerprint], [Factor_Decoupler] |
+| **LLM-agent verification** | When an LLM writes a trading strategy, how do we falsify it? | [deepseek-harness], [Spec_Workflow] |
+| **Model fragility** | When does a pricing model stop being trustworthy? | [Cpp_Hub] + paper under review at *Quantitative Finance* |
 
 ## Selected Projects
 
-### LLM-agent tooling & verification
+### ① Factor diagnostics
 
-| Project | What it does |
-|---|---|
-| [deepseek-harness](https://github.com/StormstoutLau/deepseek-harness) | Agent harness — "everything is a plugin" |
-| [Spec_Workflow](https://github.com/StormstoutLau/Spec_Workflow) | Spec-driven development workflow for a solo developer + LLM agents |
-| [ponytail](https://github.com/StormstoutLau/ponytail) | Prompt wrapper that keeps an agent thinking like the laziest senior dev |
-| [Crucix-CN](https://github.com/StormstoutLau/Crucix-CN) | Global intelligence radar, re-adapted for Chinese data sources and UI |
+**Flagship** — [Factor_Fingerprint]: fingerprints factors by time-series/cross-sectional stability plus semantic understanding, so each factor gets an identity and a failure profile. [Factor_Decoupler]: recovers clean innovations from dynamic factors via time-series decoupling.
 
-### Quantitative engineering (C++)
+Support: [factor_pipeline] · [Factor_Imputer] · [Factor_Neutralizer] · [Factor_AdaptiveWinsor] · [Factor_DB] · [Factor_Trading]
 
-| Project | What it does |
-|---|---|
-| [Cpp_Hub](https://github.com/StormstoutLau/Cpp_Hub) | Header-first C++20 pricing library: BS/Heston/PDE/Tree/MC/AAD Greeks/VaR/SVI + Python bindings, verified across three platforms (v1.0) |
+### ② LLM-agent verification
 
-### Factor toolchain
+**Flagship** — [deepseek-harness]: an agent harness ("everything is a plugin") that constrains what LLM-generated code may do. [Spec_Workflow]: the spec-driven development workflow behind it, built for a solo developer working with LLM agents.
 
-| Project | What it does |
-|---|---|
-| [factor_pipeline](https://github.com/StormstoutLau/factor_pipeline) | Unified factor-processing orchestration |
-| [Factor_Fingerprint](https://github.com/StormstoutLau/Factor_Fingerprint) | Factor fingerprinting and adaptive classification (time-series / cross-sectional stability) |
-| [Factor_Decoupler](https://github.com/StormstoutLau/Factor_Decoupler) | Time-series decoupling — recovers clean innovations from dynamic factors |
-| [Factor_Imputer](https://github.com/StormstoutLau/Factor_Imputer) | Lookahead-free factor imputation for A-share data |
-| [Factor_Neutralizer](https://github.com/StormstoutLau/Factor_Neutralizer) | Industry / market-cap neutralization |
-| [Factor_AdaptiveWinsor](https://github.com/StormstoutLau/Factor_AdaptiveWinsor) | Adaptive winsorization, distribution transform, standardization |
-| [Factor_DB](https://github.com/StormstoutLau/Factor_DB) | DuckDB-backed local factor storage and querying |
-| [Factor_Trading](https://github.com/StormstoutLau/Factor_Trading) | Backtesting framework — orders, factor management, market constraints, portfolio optimization, multi-style agent decision |
+Support: [ponytail] · [Crucix-CN]
 
-### Methodology
+### ③ Model fragility & quantitative engineering
 
-| Project | What it does |
-|---|---|
-| [audit-driven-development](https://github.com/StormstoutLau/audit-driven-development) | Multidimensional audit of code vs. design-spec alignment |
-| [paper2kg](https://github.com/StormstoutLau/paper2kg) | Papers to knowledge graphs |
-| [textbook2kg](https://github.com/StormstoutLau/textbook2kg) | Math textbooks to Lean4 formal verification code + searchable knowledge graph |
+**Flagship** — [Cpp_Hub]: header-first C++20 pricing library (BS / Heston / PDE / Tree / MC / AAD Greeks / VaR / SVI, Python bindings), verified bit-identical across three platforms with 286+320 tests (v1.0). This is the engineering side of my model-fragility research: the paper proves a model can break, the library shows where and how to detect it.
 
-## Publications
+Support: [audit-driven-development] · [paper2kg] · [textbook2kg] (Lean4 formal verification)
 
-- **A derivative-operator framework for detecting model fragility** — under review at *Quantitative Finance* (applied to CDO pricing and the Heston volatility surface)
-- **Higher-moment (un)predictability** — MIDAS line, boundary results on predictability (SSRN)
-- Full list: [ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
+## Publications ↔ Code
+
+| Paper | Status | Corresponding code |
+|---|---|---|
+| Derivative-operator framework for detecting model fragility | Under review — *Quantitative Finance* | [Cpp_Hub] (Heston / SABR / calibration) |
+| Higher-moment (un)predictability (MIDAS line) | Preprint (SSRN) | [Factor_Decoupler] · [textbook2kg] (Lean4) |
+
+Full list: [ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
 
 ## Writing
 
@@ -71,3 +57,20 @@ Long-form notes on infrastructure, workflows, and observations (mostly Chinese):
 ## AI disclosure
 
 Most code in these repositories was written with heavy LLM assistance under a spec-driven, audit-driven workflow. Research design, numerical verification, and the underlying formal claims remain my own work.
+
+[Factor_Fingerprint]: https://github.com/StormstoutLau/Factor_Fingerprint
+[Factor_Decoupler]: https://github.com/StormstoutLau/Factor_Decoupler
+[factor_pipeline]: https://github.com/StormstoutLau/factor_pipeline
+[Factor_Imputer]: https://github.com/StormstoutLau/Factor_Imputer
+[Factor_Neutralizer]: https://github.com/StormstoutLau/Factor_Neutralizer
+[Factor_AdaptiveWinsor]: https://github.com/StormstoutLau/Factor_AdaptiveWinsor
+[Factor_DB]: https://github.com/StormstoutLau/Factor_DB
+[Factor_Trading]: https://github.com/StormstoutLau/Factor_Trading
+[deepseek-harness]: https://github.com/StormstoutLau/deepseek-harness
+[Spec_Workflow]: https://github.com/StormstoutLau/Spec_Workflow
+[ponytail]: https://github.com/StormstoutLau/ponytail
+[Crucix-CN]: https://github.com/StormstoutLau/Crucix-CN
+[Cpp_Hub]: https://github.com/StormstoutLau/Cpp_Hub
+[audit-driven-development]: https://github.com/StormstoutLau/audit-driven-development
+[paper2kg]: https://github.com/StormstoutLau/paper2kg
+[textbook2kg]: https://github.com/StormstoutLau/textbook2kg
