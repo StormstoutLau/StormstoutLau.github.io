@@ -56,7 +56,7 @@ Full list: [ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
 
 Long-form notes on local LLM infrastructure and workflows (mostly Chinese):
 
-- [Local LLM deployment on an AMD Ryzen AI MAX+ 395 (128 GB) — 9-part series](posts/README.md)
+- [Local LLM deployment on an AMD Ryzen AI MAX+ 395 (128 GB) — 9-part series](posts/)
 
 ## Contact
 
