@@ -1,0 +1,10 @@
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+title: Peng Liu · StormstoutLau
+description: >-
+  Quantitative researcher building the verification layer for systematic
+  finance and LLM agents. Factor diagnostics, LLM-agent verification,
+  formal verification (Lean4), quantitative engineering (C++).
+show_downloads: false
