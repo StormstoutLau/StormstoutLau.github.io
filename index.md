@@ -57,8 +57,6 @@ This is the engineering side of the model-fragility research: the papers argue a
 | *A Joint Online Learning Framework for Time-Varying Parameter Correction and Multi-Scale Signal Decay* | Preprint | [10.2139/ssrn.6472825](https://doi.org/10.2139/ssrn.6472825) |
 | *Mixed-Frequency Granger Causality in Higher Moments: Theory and Evidence* | Preprint | [10.2139/ssrn.6950078](https://doi.org/10.2139/ssrn.6950078) |
 
-Further manuscripts are submitted, in revision or in preparation without a public identifier yet — factor-failure diagnosis via kernel-weighted local GMM (with a Lean 4 formalisation in progress), structured variational inference with a random-matrix spectral prior, and multi-agent consensus investing. Where the underlying numerical work is public, it lives in [Cpp_Hub].
-
 Full list: [ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
 
 ## Writing
