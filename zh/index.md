@@ -57,8 +57,6 @@ description: 为系统性金融与 LLM 智能体建造验证层的研究者。
 | *A Joint Online Learning Framework for Time-Varying Parameter Correction and Multi-Scale Signal Decay* | 预印本 | [10.2139/ssrn.6472825](https://doi.org/10.2139/ssrn.6472825) |
 | *Mixed-Frequency Granger Causality in Higher Moments: Theory and Evidence* | 预印本 | [10.2139/ssrn.6950078](https://doi.org/10.2139/ssrn.6950078) |
 
-其余手稿处于投稿、修订或筹备阶段，暂无公开标识——核加权局部 GMM 的因子失效诊断（Lean 4 形式化进行中）、随机矩阵谱先验的结构化变分推断、多智能体共识投资。若底层数值工作已公开，则位于 [Cpp_Hub]。
-
 完整列表：[ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
 
 ## 写作
