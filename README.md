@@ -9,7 +9,7 @@ Source for my personal site — **[stormstoutlau.github.io](https://stormstoutla
 
 **Research programme** — factor diagnostics · auditable agent infrastructure (`RPC`, `Spec_Workflow`) · model fragility (`Cpp_Hub`) · knowledge engineering (`paper2kg`, `textbook2kg`).
 
-**Publications** — four with public identifiers (Zenodo / SSRN); the rest are submitted, in revision or in preparation. See the site for the full list.
+**Publications** — four with public identifiers (Zenodo / SSRN). Full list on the site.
 
 **Profiles** — [GitHub](https://github.com/StormstoutLau) · [ORCID 0009-0008-7493-6473](https://orcid.org/0009-0008-7493-6473)
 
