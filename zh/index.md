@@ -52,7 +52,7 @@ description: 为系统性金融与 LLM 智能体建造验证层的研究者。
 
 | 论文 | 状态 | 公开标识 |
 |---|---|---|
-| *Model Fragility Beyond Base Correlation: An Operator-Theoretic Approach to CDO Risk Measurement* | 在审 —— *Quantitative Finance* | [10.5281/zenodo.19493252](https://doi.org/10.5281/zenodo.19493252) |
+| *Base Correlation Is Blind: Structural Model Risk in CDO Tranche Pricing* | 在审 —— *Quantitative Finance* | 预印本 v1.0 —— [10.5281/zenodo.19493252](https://doi.org/10.5281/zenodo.19493252) |
 | *Conduction Intensity and Structural Fragility of Heston Volatility Surfaces* | 预印本 | [10.5281/zenodo.19826537](https://doi.org/10.5281/zenodo.19826537) |
 | *A Joint Online Learning Framework for Time-Varying Parameter Correction and Multi-Scale Signal Decay* | 预印本 | [10.2139/ssrn.6472825](https://doi.org/10.2139/ssrn.6472825) |
 | *Mixed-Frequency Granger Causality in Higher Moments: Theory and Evidence* | 预印本 | [10.2139/ssrn.6950078](https://doi.org/10.2139/ssrn.6950078) |
