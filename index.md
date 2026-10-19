@@ -52,7 +52,7 @@ This is the engineering side of the model-fragility research: the papers argue a
 
 | Paper | Status | Identifier |
 |---|---|---|
-| *Model Fragility Beyond Base Correlation: An Operator-Theoretic Approach to CDO Risk Measurement* | Under review — *Quantitative Finance* | [10.5281/zenodo.19493252](https://doi.org/10.5281/zenodo.19493252) |
+| *Base Correlation Is Blind: Structural Model Risk in CDO Tranche Pricing* | Under review — *Quantitative Finance* | preprint v1.0 — [10.5281/zenodo.19493252](https://doi.org/10.5281/zenodo.19493252) |
 | *Conduction Intensity and Structural Fragility of Heston Volatility Surfaces* | Preprint | [10.5281/zenodo.19826537](https://doi.org/10.5281/zenodo.19826537) |
 | *A Joint Online Learning Framework for Time-Varying Parameter Correction and Multi-Scale Signal Decay* | Preprint | [10.2139/ssrn.6472825](https://doi.org/10.2139/ssrn.6472825) |
 | *Mixed-Frequency Granger Causality in Higher Moments: Theory and Evidence* | Preprint | [10.2139/ssrn.6950078](https://doi.org/10.2139/ssrn.6950078) |
